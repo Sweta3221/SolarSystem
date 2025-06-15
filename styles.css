@@ -1,0 +1,88 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background: black;
+  overflow: hidden;
+  height: 100%;
+}
+
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Twinkling stars */
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.2; }
+  to { opacity: 1; }
+}
+
+/* Sun */
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ffcc33, #ff9900);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px 30px #ffaa00cc;
+  z-index: 2;
+}
+
+/* Planets */
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mercury  { width: 8px;  height: 8px;  background: gray; }
+.venus    { width: 12px; height: 12px; background: orange; }
+.earth    { width: 14px; height: 14px; background: #4b6cb7; }
+.mars     { width: 10px; height: 10px; background: red; }
+.jupiter  { width: 28px; height: 28px; background: #d2b48c; }
+.saturn   { width: 24px; height: 24px; background: #deb887; }
+.uranus   { width: 18px; height: 18px; background: #7fffd4; }
+.neptune  { width: 18px; height: 18px; background: #4169e1; }
+
+/* Saturn's Ring */
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 10px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+}
+
+/* Moon */
+.moon {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: white;
+  border-radius: 50%;
+}
